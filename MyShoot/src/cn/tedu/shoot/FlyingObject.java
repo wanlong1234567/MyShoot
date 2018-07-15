@@ -1,31 +1,31 @@
 package cn.tedu.shoot;
 import java.awt.image.BufferedImage;
-/** ·ÉÐÐÎï */
+/**å…¬å…±ç±» */
 public abstract class FlyingObject {
 	protected BufferedImage image; //Í¼Æ¬
-	protected int width;           //¿í
-	protected int height;		   //¸ß
-	protected int x;			   //x×ø±ê
-	protected int y;			   //y×ø±ê
+	protected int width;           //ï¿½ï¿½
+	protected int height;		   //ï¿½ï¿½
+	protected int x;			   //xï¿½ï¿½ï¿½ï¿½
+	protected int y;			   //yï¿½ï¿½ï¿½ï¿½
 	
-	/** ·ÉÐÐÎï×ßÒ»²½ */
+	/** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ */
 	public abstract void step();
 	
-	/** ¼ì²â·ÉÐÐÎïÊÇ·ñÔ½½ç */
+	/** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ô½ï¿½ï¿½ */
 	public abstract boolean outOfBounds();
 	
-	/** µÐÈË±»×Óµ¯Éä»÷ this:µÐÈË  b:×Óµ¯ */
+	/** ï¿½ï¿½ï¿½Ë±ï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½ this:ï¿½ï¿½ï¿½ï¿½  b:ï¿½Óµï¿½ */
 	public boolean shootBy(Bullet b){
-		int x1 = this.x;             //x1:µÐÈËµÄx
-		int x2 = this.x+this.width;  //x2:µÐÈËµÄx+µÐÈËµÄ¿í
-		int y1 = this.y;             //y1:µÐÈËµÄy
-		int y2 = this.y+this.height; //y2:µÐÈËµÄy+µÐÈËµÄ¸ß
-		int x = b.x;                 //x:×Óµ¯µÄx
-		int y = b.y;                 //y:×Óµ¯µÄy
+		int x1 = this.x;             //x1:ï¿½ï¿½ï¿½Ëµï¿½x
+		int x2 = this.x+this.width;  //x2:ï¿½ï¿½ï¿½Ëµï¿½x+ï¿½ï¿½ï¿½ËµÄ¿ï¿½
+		int y1 = this.y;             //y1:ï¿½ï¿½ï¿½Ëµï¿½y
+		int y2 = this.y+this.height; //y2:ï¿½ï¿½ï¿½Ëµï¿½y+ï¿½ï¿½ï¿½ËµÄ¸ï¿½
+		int x = b.x;                 //x:ï¿½Óµï¿½ï¿½ï¿½x
+		int y = b.y;                 //y:ï¿½Óµï¿½ï¿½ï¿½y
 		
 		return x>=x1 && x<=x2
 			   &&
-			   y>=y1 && y<=y2; //xÔÚx1Óëx2Ö®¼ä£¬²¢ÇÒ£¬yÔÚy1Óëy2Ö®¼ä£¬¼´Îª×²ÉÏÁË
+			   y>=y1 && y<=y2; //xï¿½ï¿½x1ï¿½ï¿½x2Ö®ï¿½ä£¬ï¿½ï¿½ï¿½Ò£ï¿½yï¿½ï¿½y1ï¿½ï¿½y2Ö®ï¿½ä£¬ï¿½ï¿½Îª×²ï¿½ï¿½ï¿½ï¿½
 	}
 	
 }
