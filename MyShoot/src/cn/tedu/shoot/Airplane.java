@@ -1,32 +1,32 @@
 package cn.tedu.shoot;
 import java.util.Random;
 
-/** Ð¡µÐ»ú: ÊÇ·ÉÐÐÎï£¬Ò²ÊÇµÐÈË */
+/** é£žæœºå¤§æˆ˜çš„æ€»çš„æµç¨‹é›†åˆç±» */
 public class Airplane extends FlyingObject implements Enemy {
-	private int speed = 2; //ÒÆ¶¯ËÙ¶È
-	/** ¹¹Ôì·½·¨ */
+	private int speed = 2; //ï¿½Æ¶ï¿½ï¿½Ù¶ï¿½
+	/** ï¿½ï¿½ï¿½ì·½ï¿½ï¿½ */
 	public Airplane(){
 		image = ShootGame.airplane; //Í¼Æ¬
-		width = image.getWidth();	//¿í
-		height = image.getHeight(); //¸ß
-		Random rand = new Random(); //Ëæ»úÊý¶ÔÏó
-		x = rand.nextInt(ShootGame.WIDTH-this.width); //x:0µ½(´°¿Ú¿í-µÐ»ú¿í)Ö®ÄÚµÄËæ»úÊý
-		y = -this.height; //y:¸ºµÄµÐ»úµÄ¸ß
+		width = image.getWidth();	//ï¿½ï¿½
+		height = image.getHeight(); //ï¿½ï¿½
+		Random rand = new Random(); //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		x = rand.nextInt(ShootGame.WIDTH-this.width); //x:0ï¿½ï¿½(ï¿½ï¿½ï¿½Ú¿ï¿½-ï¿½Ð»ï¿½ï¿½ï¿½)Ö®ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		y = -this.height; //y:ï¿½ï¿½ï¿½ÄµÐ»ï¿½ï¿½Ä¸ï¿½
 	}
 	
-	/** ÖØÐ´getScore()µÃ·Ö */
+	/** ï¿½ï¿½Ð´getScore()ï¿½Ã·ï¿½ */
 	public int getScore(){
-		return 5; //´òµôÒ»¸öµÐ»úµÃ5·Ö
+		return 5; //ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ð»ï¿½ï¿½ï¿½5ï¿½ï¿½
 	}
 	
-	/** ÖØÐ´step()×ßÒ»²½ */
+	/** ï¿½ï¿½Ð´step()ï¿½ï¿½Ò»ï¿½ï¿½ */
 	public void step(){
-		y+=speed; //y+(ÏòÏÂ)
+		y+=speed; //y+(ï¿½ï¿½ï¿½ï¿½)
 	}
 	
-	/** ÖØÐ´outOfBounds()Ô½½ç¼ì²é */
+	/** ï¿½ï¿½Ð´outOfBounds()Ô½ï¿½ï¿½ï¿½ï¿½ */
 	public boolean outOfBounds(){
-		return this.y>=ShootGame.HEIGHT; //µÐ»úµÄy>=´°¿ÚµÄ¸ß£¬¼´ÎªÔ½½çÁË
+		return this.y>=ShootGame.HEIGHT; //ï¿½Ð»ï¿½ï¿½ï¿½y>=ï¿½ï¿½ï¿½ÚµÄ¸ß£ï¿½ï¿½ï¿½ÎªÔ½ï¿½ï¿½ï¿½ï¿½
 	}
 	
 }
